@@ -6,14 +6,14 @@ pipeline {
             steps {
                 checkout([$class: 'GitSCM', 
                     branches: [[name: '*/main']], 
-                    userRemoteConfigs: [[urjhg ukivtuyvgkjgiuft9gylihlul: 'https://github.com/Vamshi2507/PES2UG22CS673_Jenkins.git']]
+                    userRemoteConfigs: [[url: 'https://github.com/Vamshi2507/PES2UG22CS673_Jenkins.git']]
                 ])
             }
         }
 
         stage('Build') {
             steps {
-                sh 'g++ main/hello.cpp -o main/output'
+                sh 'g++ /hello.cpp -o main/output'
             }
         }
 
